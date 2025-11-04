@@ -19,6 +19,7 @@ export function codeExists(code) {
     return Boolean(map[code])
 }
 export function getLongUrl(code) {
-    const map = readMap()
+    const map = JSON.parse(localStorage.getItem('url_map_v1')) || {}
     return map[code] || null
-}
+  }
+  
